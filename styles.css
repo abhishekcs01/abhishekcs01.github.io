@@ -79,6 +79,12 @@ nav a:hover { color: var(--text); }
 .timeline { display: grid; gap: 16px; border-left: 2px solid var(--line); padding-left: 14px; }
 .t-item { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; }
 .t-left { color: var(--text); }
+
+.t-left strong,
+.t-left span {
+  display: block;
+}
+
 .t-right { color: var(--muted); }
 .t-right span { display: inline-block; background: #0f141b; border: 1px solid var(--line); padding: 2px 8px; border-radius: 999px; margin-bottom: 6px; color: var(--text); }
 
