@@ -8,14 +8,12 @@
   <meta property="og:title" content="Abhishek Chettiar — AI/ML Engineer" />
   <meta property="og:description" content="I build production-grade AI and ML systems end-to-end: from data and modeling to deployment." />
   <meta property="og:type" content="website" />
-  <!-- Optional: Add a link to an image for social media sharing -->
   <meta property="og:image" content="assets/profile.jpg" />
   <meta name="theme-color" content="#0f172a" />
   <link rel="icon" href="https://fav.farm/🤖" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- Link to the new stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -42,7 +40,6 @@
         <p class="tagline">Passionate about building data-driven, intelligent solutions for real-world problems in healthcare, finance, and computer vision.</p>
         <div class="cta-row">
           <a class="btn primary" href="mailto:shankarabhishek2001@gmail.com">Get in touch</a>
-          <!-- Make sure to have your CV pdf in an 'assets' folder -->
           <a class="btn ghost" href="assets/Abhishek Chettiar CV.pdf" target="_blank" rel="noopener">View résumé</a>
         </div>
         <div class="quick-facts">
@@ -50,8 +47,8 @@
         </div>
       </div>
       <div class="hero-media">
-        <!-- Make sure to have your profile picture in an 'assets' folder -->
-        <img src="https://i.ibb.co/L6L62rC/Whats-App-Image-2024-07-25-at-12-11-06-PM.jpg" alt="Abhishek Chettiar Profile Photo" />
+        <!-- The image source is now pointing to your local assets folder -->
+        <img src="assets/profile.jpg" alt="Abhishek Chettiar Profile Photo" onerror="this.onerror=null;this.src='https://placehold.co/280x280/0f172a/e2e8f0?text=AC';">
       </div>
     </section>
 
@@ -59,7 +56,7 @@
     <section id="projects" class="container section">
       <h2>Selected Projects</h2>
       <div class="grid projects-grid">
-        <article class="card">
+        <article class="card featured">
           <div class="card-head"><h3>Explainable AI for Healthcare</h3></div>
           <p>Developed a heart disease prediction model using XGBoost with SHAP and LIME for transparent, feature-level decision impact visualization.</p>
           <ul class="meta">
@@ -89,22 +86,6 @@
           <ul class="meta">
             <li>Python · YOLOv5 · PyTorch · OpenCV · Gradio</li>
             <li>Achieved mAP@0.5 of 91% in real-time</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-head"><h3>Dog Breed Classification</h3></div>
-          <p>Implemented a ResNet50-based CNN using transfer learning to classify over 120 dog breeds with high accuracy.</p>
-          <ul class="meta">
-            <li>Python · TensorFlow · Keras · ResNet50 · CNN</li>
-            <li>Achieved 92.1% accuracy with 30% less training time</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-head"><h3>Human Activity Recognition</h3></div>
-          <p>Processed smartphone sensor data (accelerometer, gyroscope) to classify human activities using LSTM and Random Forest models.</p>
-          <ul class="meta">
-            <li>Python · LSTM · Random Forest · TensorFlow · Scikit-learn</li>
-            <li>Achieved an F1 score of 0.89 across six classes</li>
           </ul>
         </article>
       </div>
