@@ -3,20 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abhishek Chettiar — AI/ML Developer</title>
-  <meta name="description" content="AI/ML Developer portfolio. I build production-grade LLM and ML systems end-to-end: data, modeling, and deployment." />
-  <meta property="og:title" content="Abhishek Chettiar — AI/ML Developer" />
-  <meta property="og:description" content="I build production-grade LLM and ML systems end-to-end: data, modeling, and deployment." />
+  <title>Abhishek Chettiar — AI/ML Engineer</title>
+  <meta name="description" content="AI/ML Engineer portfolio. I build production-grade AI and ML systems end-to-end: from data and modeling to deployment." />
+  <meta property="og:title" content="Abhishek Chettiar — AI/ML Engineer" />
+  <meta property="og:description" content="I build production-grade AI and ML systems end-to-end: from data and modeling to deployment." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/your-username/your-username.github.io/main/assets/og.png" />
-  <meta name="theme-color" content="#0b0f14" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Optional: Add a link to an image for social media sharing -->
+  <meta property="og:image" content="assets/profile.jpg" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" href="https://fav.farm/🤖" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Link to the new stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Header and Navigation -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#top">Abhishek Chettiar</a>
@@ -24,133 +27,190 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
-        <a href="#articles">Articles</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
+    <!-- Hero Section -->
     <section class="hero container">
       <div class="hero-text">
         <h1>AI/ML Engineer</h1>
-        <p class="tagline">I build intelligent systems that turn data into decisions. Focus: LLM apps, agents, and production ML.</p>
+        <p class="tagline">Passionate about building data-driven, intelligent solutions for real-world problems in healthcare, finance, and computer vision.</p>
         <div class="cta-row">
-          <a class="btn primary" href="mailto:your@email.com">Get in touch</a>
-          <a class="btn ghost" href="assets/resume.pdf" target="_blank" rel="noopener">View résumé</a>
-          <a class="btn ghost" href="https://huggingface.co/spaces/your-handle/your-demo" target="_blank" rel="noopener">Live ML demo</a>
+          <a class="btn primary" href="mailto:shankarabhishek2001@gmail.com">Get in touch</a>
+          <!-- Make sure to have your CV pdf in an 'assets' folder -->
+          <a class="btn ghost" href="assets/Abhishek Chettiar CV.pdf" target="_blank" rel="noopener">View résumé</a>
         </div>
         <div class="quick-facts">
-          <span>Python · PyTorch · TensorFlow · LangChain · FastAPI · Docker · AWS</span>
+          <span>Python · PyTorch · TensorFlow · LangChain · GCP · Docker</span>
         </div>
       </div>
       <div class="hero-media">
-        <img src="assets/profile.jpg" alt="Profile photo" />
+        <!-- Make sure to have your profile picture in an 'assets' folder -->
+        <img src="https://i.ibb.co/L6L62rC/Whats-App-Image-2024-07-25-at-12-11-06-PM.jpg" alt="Abhishek Chettiar Profile Photo" />
       </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="container section">
       <h2>Selected Projects</h2>
       <div class="grid projects-grid">
-        <!-- Project Card 1 -->
         <article class="card">
-          <div class="card-head">
-            <h3>Research Paper QA Agent</h3>
-          </div>
-          <p>Retrieval-augmented generation agent that answers questions over scientific PDFs with citation-grounded responses.</p>
+          <div class="card-head"><h3>Explainable AI for Healthcare</h3></div>
+          <p>Developed a heart disease prediction model using XGBoost with SHAP and LIME for transparent, feature-level decision impact visualization.</p>
           <ul class="meta">
-            <li>LangChain · FAISS · OpenAI/LLM API · FastAPI</li>
-            <li>Deployed on Spaces with Gradio UI</li>
+            <li>Python · XGBoost · SHAP · LIME · Streamlit</li>
+            <li>Achieved 84% accuracy with high interpretability</li>
           </ul>
-          <div class="card-actions">
-            <a href="https://huggingface.co/spaces/your-handle/paper-qa" target="_blank" rel="noopener">Live demo</a>
-            <a href="https://github.com/your-username/paper-qa" target="_blank" rel="noopener">Code</a>
-            <a href="#" class="detail-link">Case study</a>
-          </div>
         </article>
-        <!-- Project Card 2 -->
         <article class="card">
-          <div class="card-head">
-            <h3>Vision Defect Classifier</h3>
-          </div>
-          <p>Transfer learning on real-world manufacturing images with on-device inference optimization.</p>
+          <div class="card-head"><h3>AI-Powered Design-to-Code Assistant</h3></div>
+          <p>Built a multi-agent AI assistant using GPT-4.1 and Claude to convert design prompts into deployable code with automated fallback workflows.</p>
           <ul class="meta">
-            <li>PyTorch · TorchVision · ONNX · TensorRT</li>
-            <li>Latency reduced 38% vs baseline</li>
+            <li>Python · GPT-4 · Claude · Hugging Face · n8n</li>
+            <li>Improved design-to-deployment time by 40%</li>
           </ul>
-          <div class="card-actions">
-            <a href="https://github.com/your-username/vision-defect-classifier" target="_blank" rel="noopener">Code</a>
-            <a href="#" class="detail-link">Report</a>
-          </div>
         </article>
-        <!-- Project Card 3 -->
         <article class="card">
-          <div class="card-head">
-            <h3>LLM Fine-tuning Pipeline</h3>
-          </div>
-          <p>End-to-end SFT + LoRA pipeline with evaluation harness and experiment tracking.</p>
+          <div class="card-head"><h3>Stock Market Prediction</h3></div>
+          <p>Built a hybrid time-series forecasting model combining LSTM and ARIMA to predict stock closing prices from 5 years of historical data.</p>
           <ul class="meta">
-            <li>Transformers · PEFT · Weights & Biases · DVC</li>
+            <li>Python · LSTM · ARIMA · Keras · TensorFlow</li>
+            <li>Improved MSE by 22% over baseline</li>
           </ul>
-          <div class="card-actions">
-            <a href="https://github.com/your-username/llm-finetune-pipeline" target="_blank" rel="noopener">Code</a>
-            <a href="#" class="detail-link">Docs</a>
-          </div>
+        </article>
+        <article class="card">
+          <div class="card-head"><h3>Sign Language Detection</h3></div>
+          <p>Trained a YOLOv5 model on 10K+ annotated images for real-time American Sign Language gesture detection via webcam.</p>
+          <ul class="meta">
+            <li>Python · YOLOv5 · PyTorch · OpenCV · Gradio</li>
+            <li>Achieved mAP@0.5 of 91% in real-time</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-head"><h3>Dog Breed Classification</h3></div>
+          <p>Implemented a ResNet50-based CNN using transfer learning to classify over 120 dog breeds with high accuracy.</p>
+          <ul class="meta">
+            <li>Python · TensorFlow · Keras · ResNet50 · CNN</li>
+            <li>Achieved 92.1% accuracy with 30% less training time</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-head"><h3>Human Activity Recognition</h3></div>
+          <p>Processed smartphone sensor data (accelerometer, gyroscope) to classify human activities using LSTM and Random Forest models.</p>
+          <ul class="meta">
+            <li>Python · LSTM · Random Forest · TensorFlow · Scikit-learn</li>
+            <li>Achieved an F1 score of 0.89 across six classes</li>
+          </ul>
         </article>
       </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="container section">
-      <h2>Skills</h2>
+      <h2>Technical Skills</h2>
       <div class="skills">
-        <span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span>
-        <span class="chip">LangChain</span><span class="chip">FastAPI</span><span class="chip">Docker</span>
-        <span class="chip">AWS</span><span class="chip">Hugging Face</span><span class="chip">Vector DBs</span>
-        <span class="chip">Experiment Tracking</span><span class="chip">RAG</span><span class="chip">Agents</span>
+        <span class="chip">Python</span><span class="chip">R</span><span class="chip">SQL</span>
+        <span class="chip">TensorFlow</span><span class="chip">PyTorch</span><span class="chip">Keras</span>
+        <span class="chip">Scikit-learn</span><span class="chip">Hugging Face</span><span class="chip">LangChain</span>
+        <span class="chip">GPT-4</span><span class="chip">RAG</span><span class="chip">Agentic AI</span>
+        <span class="chip">GCP</span><span class="chip">Docker</span><span class="chip">YOLO</span>
+        <span class="chip">OpenCV</span><span class="chip">Pandas</span><span class="chip">NumPy</span>
+        <span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Power BI</span>
+        <span class="chip">Tableau</span><span class="chip">Streamlit</span><span class="chip">Gradio</span>
+        <span class="chip">XGBoost</span><span class="chip">LSTM</span><span class="chip">CNN</span>
       </div>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience" class="container section">
       <h2>Experience</h2>
       <div class="timeline">
         <div class="t-item">
           <div class="t-left">
-            <strong>AI/ML Intern</strong> · Company Name
+            <strong>Software Developer (AI/ML) Intern</strong>
+            <span>WAi Technologies</span>
           </div>
           <div class="t-right">
-            <span>2024</span>
-            <p>Built LLM-based internal Q&A assistant; improved answer accuracy by 22% via better retrieval and prompt strategy.</p>
-          </div>
-        </div>
-        <div class="t-item">
-          <div class="t-left"><strong>Project Lead</strong> · University</div>
-          <div class="t-right">
-            <span>2023</span>
-            <p>Led a 4-person team to ship a computer vision pipeline to detect anomalies with a reproducible MLOps setup.</p>
+            <span class="t-date">Apr 2025 - Jul 2025</span>
+            <p>Developed backend APIs and trained a YOLOv11 object detection model on 10K+ images, achieving 93% precision. Automated deployment workflows using n8n, reducing manual configuration by 35%.</p>
           </div>
         </div>
       </div>
     </section>
-
-    <section id="articles" class="container section">
-      <h2>Articles</h2>
-      <ul class="articles">
-        <li><a target="_blank" rel="noopener" href="https://medium.com/@your-handle/agentic-ai-in-plain-english-...">Agentic AI in plain English</a></li>
-        <li><a target="_blank" rel="noopener" href="https://yourblog.com/llm-eval-shortcuts">LLM eval shortcuts</a></li>
-      </ul>
+    
+    <!-- Education Section -->
+    <section id="education" class="container section">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="t-item">
+                <div class="t-left">
+                    <strong>PG Diploma, AI & Machine Learning</strong>
+                    <span>MIT World Peace University, Pune</span>
+                </div>
+                <div class="t-right">
+                    <span class="t-date">2025</span>
+                </div>
+            </div>
+            <div class="t-item">
+                <div class="t-left">
+                    <strong>Bachelor's, Mechanical Engineering</strong>
+                    <span>A. P. Shah Institute of Technology, Thane</span>
+                </div>
+                <div class="t-right">
+                    <span class="t-date">2023</span>
+                </div>
+            </div>
+            <div class="t-item">
+                <div class="t-left">
+                    <strong>Higher Secondary Certificate (HSC)</strong>
+                    <span>Vani Vidyalaya Jr College, Mumbai</span>
+                </div>
+                <div class="t-right">
+                    <span class="t-date">2019</span>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="container section">
+        <h2>Certifications</h2>
+        <div class="skills">
+            <span class="chip">Python Programming Masterclass</span>
+            <span class="chip">Python Deep Learning for Beginners</span>
+            <span class="chip">Basics of Machine Learning</span>
+            <span class="chip">Machine Learning A-Z</span>
+            <span class="chip">Artificial Intelligence A-Z</span>
+            <span class="chip">AI Tools and ChatGPT Workshop</span>
+            <span class="chip">Data Science Course: Complete Bootcamp</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="container section">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:shankarabhishek2001@gmail.com">EMAIL-ID</a> · LinkedIn: <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/abhishek-chettiar-0am1869/">Abhishek-Chettiar</a> · GitHub: <a target="_blank" rel="noopener" href="https://github.com/abhishekcs01">abhishekcs01</a></p>
+      <p>Let's connect! Feel free to reach out for collaborations or just a chat.</p>
+      <p>
+          Email: <a href="mailto:shankarabhishek2001@gmail.com">shankarabhishek2001@gmail.com</a> · 
+          LinkedIn: <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/abhishek-chettiar-0am1869/">Abhishek Chettiar</a> · 
+          GitHub: <a target="_blank" rel="noopener" href="https://github.com/abhishekcs01">abhishekcs01</a>
+      </p>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <p>© <span id="year"></span> Abhishek Chettiar. All rights reserved.</p>
     </div>
   </footer>
+  
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
