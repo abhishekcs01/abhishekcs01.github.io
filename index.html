@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — AI/ML Developer</title>
+  <meta name="description" content="AI/ML Developer portfolio. I build production-grade LLM and ML systems end-to-end: data, modeling, and deployment." />
+  <meta property="og:title" content="Your Name — AI/ML Developer" />
+  <meta property="og:description" content="I build production-grade LLM and ML systems end-to-end: data, modeling, and deployment." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/your-username/your-username.github.io/main/assets/og.png" />
+  <meta name="theme-color" content="#0b0f14" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">Your Name</a>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#articles">Articles</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>AI/ML Engineer</h1>
+        <p class="tagline">I build intelligent systems that turn data into decisions. Focus: LLM apps, agents, and production ML.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:your@email.com">Get in touch</a>
+          <a class="btn ghost" href="assets/resume.pdf" target="_blank" rel="noopener">View résumé</a>
+          <a class="btn ghost" href="https://huggingface.co/spaces/your-handle/your-demo" target="_blank" rel="noopener">Live ML demo</a>
+        </div>
+        <div class="quick-facts">
+          <span>Python · PyTorch · TensorFlow · LangChain · FastAPI · Docker · AWS</span>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/profile.jpg" alt="Profile photo" />
+      </div>
+    </section>
+
+    <section id="projects" class="container section">
+      <h2>Selected Projects</h2>
+      <div class="grid projects-grid">
+        <!-- Project Card 1 -->
+        <article class="card">
+          <div class="card-head">
+            <h3>Research Paper QA Agent</h3>
+          </div>
+          <p>Retrieval-augmented generation agent that answers questions over scientific PDFs with citation-grounded responses.</p>
+          <ul class="meta">
+            <li>LangChain · FAISS · OpenAI/LLM API · FastAPI</li>
+            <li>Deployed on Spaces with Gradio UI</li>
+          </ul>
+          <div class="card-actions">
+            <a href="https://huggingface.co/spaces/your-handle/paper-qa" target="_blank" rel="noopener">Live demo</a>
+            <a href="https://github.com/your-username/paper-qa" target="_blank" rel="noopener">Code</a>
+            <a href="#" class="detail-link">Case study</a>
+          </div>
+        </article>
+        <!-- Project Card 2 -->
+        <article class="card">
+          <div class="card-head">
+            <h3>Vision Defect Classifier</h3>
+          </div>
+          <p>Transfer learning on real-world manufacturing images with on-device inference optimization.</p>
+          <ul class="meta">
+            <li>PyTorch · TorchVision · ONNX · TensorRT</li>
+            <li>Latency reduced 38% vs baseline</li>
+          </ul>
+          <div class="card-actions">
+            <a href="https://github.com/your-username/vision-defect-classifier" target="_blank" rel="noopener">Code</a>
+            <a href="#" class="detail-link">Report</a>
+          </div>
+        </article>
+        <!-- Project Card 3 -->
+        <article class="card">
+          <div class="card-head">
+            <h3>LLM Fine-tuning Pipeline</h3>
+          </div>
+          <p>End-to-end SFT + LoRA pipeline with evaluation harness and experiment tracking.</p>
+          <ul class="meta">
+            <li>Transformers · PEFT · Weights & Biases · DVC</li>
+          </ul>
+          <div class="card-actions">
+            <a href="https://github.com/your-username/llm-finetune-pipeline" target="_blank" rel="noopener">Code</a>
+            <a href="#" class="detail-link">Docs</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="container section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span>
+        <span class="chip">LangChain</span><span class="chip">FastAPI</span><span class="chip">Docker</span>
+        <span class="chip">AWS</span><span class="chip">Hugging Face</span><span class="chip">Vector DBs</span>
+        <span class="chip">Experiment Tracking</span><span class="chip">RAG</span><span class="chip">Agents</span>
+      </div>
+    </section>
+
+    <section id="experience" class="container section">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-left">
+            <strong>AI/ML Intern</strong> · Company Name
+          </div>
+          <div class="t-right">
+            <span>2024</span>
+            <p>Built LLM-based internal Q&A assistant; improved answer accuracy by 22% via better retrieval and prompt strategy.</p>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-left"><strong>Project Lead</strong> · University</div>
+          <div class="t-right">
+            <span>2023</span>
+            <p>Led a 4-person team to ship a computer vision pipeline to detect anomalies with a reproducible MLOps setup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="articles" class="container section">
+      <h2>Articles</h2>
+      <ul class="articles">
+        <li><a target="_blank" rel="noopener" href="https://medium.com/@your-handle/agentic-ai-in-plain-english-...">Agentic AI in plain English</a></li>
+        <li><a target="_blank" rel="noopener" href="https://yourblog.com/llm-eval-shortcuts">LLM eval shortcuts</a></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:your@email.com">your@email.com</a> · LinkedIn: <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/your-handle">/in/your-handle</a> · GitHub: <a target="_blank" rel="noopener" href="https://github.com/your-username">@your-username</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
