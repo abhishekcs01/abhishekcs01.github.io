@@ -38,33 +38,4 @@ document.addEventListener('DOMContentLoaded', () => {
     cursorGradient.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
   });
 
-  // Internship Letter Modal Logic
-  const modalOverlay = document.getElementById('internship-modal');
-  const openModalBtn = document.getElementById('internship-letter-btn');
-  const closeModalBtn = document.querySelector('.modal-close-btn');
-
-  const openModal = () => modalOverlay.classList.add('active');
-  const closeModal = () => modalOverlay.classList.remove('active');
-
-  if (openModalBtn) {
-    openModalBtn.addEventListener('click', openModal);
-  }
-
-  if (closeModalBtn) {
-    closeModalBtn.addEventListener('click', closeModal);
-  }
-
-  // Close modal when clicking on the overlay
-  modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-      closeModal();
-    }
-  });
-
-  // Close modal with the Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
-      closeModal();
-    }
-  });
 });
