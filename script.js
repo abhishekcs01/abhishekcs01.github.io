@@ -32,10 +32,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.section').forEach(section => observer.observe(section));
 
-  // Gradient cursor effect
-  const cursorGradient = document.querySelector('.cursor-gradient');
-  window.addEventListener('mousemove', e => {
-    cursorGradient.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-  });
-
 });
