@@ -29,11 +29,14 @@ It includes:
 ---
 
 ## 📂 Repository Structure
-├── index.html # Main portfolio page
-├── styles.css # Styling (responsive & animated)
-├── script.js # Interactivity & scroll animations
-├── assets/ # Images, resume, and certificates
-└── README.md # You're reading it now
+
+```plaintext
+├── index.html        # Main portfolio page
+├── styles.css        # Styling (responsive & animated)
+├── script.js         # Interactivity & scroll animations
+├── assets/           # Images, resume, and certificates
+└── README.md         # You're reading it now
+```
 
 ---
 
