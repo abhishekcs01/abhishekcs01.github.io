@@ -6,7 +6,6 @@
   <title>Abhishek Chettiar — AI/ML Engineer</title>
   <meta name="description" content="AI/ML Engineer portfolio. I build production-grade AI and ML systems end-to-end: from data and modeling to deployment." />
   
-  <!-- Open Graph / Link Preview -->
   <meta property="og:title" content="Abhishek Chettiar — AI/ML Engineer" />
   <meta property="og:description" content="I build production-grade AI and ML systems end-to-end: from data and modeling to deployment." />
   <meta property="og:type" content="website" />
@@ -14,7 +13,6 @@
   
   <meta name="theme-color" content="#0f172a" />
 
-  <!-- Favicon -->
   <link rel="icon" href="assets/Logo.png" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +21,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header and Navigation -->
+  <div class="cursor-gradient"></div>
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#top">Abhishek Chettiar</a>
@@ -39,7 +37,6 @@
   </header>
 
   <main id="top">
-    <!-- Hero Section -->
     <section class="hero container">
       <div class="hero-text">
         <h1>AI/ML Engineer</h1>
@@ -53,13 +50,11 @@
         </div>
       </div>
       <div class="hero-media">
-        <!-- Profile photo with fallback to Logo -->
         <img src="assets/profile.jpg" alt="Abhishek Chettiar Profile Photo" 
              onerror="this.onerror=null;this.src='assets/Logo.png';">
       </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="container section">
       <h2>Selected Projects</h2>
       <div class="grid projects-grid">
@@ -98,7 +93,6 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="container section">
       <h2>Technical Skills</h2>
       <div class="skills">
@@ -114,7 +108,6 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="container section">
       <h2>Experience</h2>
       <div class="timeline">
@@ -126,12 +119,12 @@
           <div class="t-right">
             <span class="t-date">Apr 2025 - Jul 2025</span>
             <p>Developed backend APIs and trained a YOLOv11 object detection model on 10K+ images, achieving 93% precision. Automated deployment workflows using n8n, reducing manual configuration by 35%.</p>
+            <button class="btn ghost" id="internship-letter-btn">View Internship Letter</button>
           </div>
         </div>
       </div>
     </section>
     
-    <!-- Education Section -->
     <section id="education" class="container section">
         <h2>Education</h2>
         <div class="timeline">
@@ -165,7 +158,6 @@
         </div>
     </section>
 
-    <!-- Certifications Section -->
     <section id="certifications" class="container section">
       <h2>Certifications</h2>
       <div class="skills">
@@ -179,7 +171,6 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="container section">
       <h2>Contact</h2>
       <p>Let's connect! Feel free to reach out for collaborations or just a chat.</p>
@@ -190,15 +181,23 @@
       </p>
     </section>
   </main>
+  
+  <div id="internship-modal" class="modal-overlay">
+      <div class="modal-content">
+          <button class="modal-close-btn">&times;</button>
+          <h3>Internship Completion Letter</h3>
+          <iframe src="assets/internship-letter.pdf" width="100%" height="500px"></iframe>
+          <a href="assets/internship-letter.pdf" download class="btn primary">Download Letter</a>
+      </div>
+  </div>
 
-  <!-- Footer -->
+
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> Abhishek Chettiar. All rights reserved.</p>
     </div>
   </footer>
   
-  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
