@@ -1,192 +1,142 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abhishek Chettiar — AI/ML Engineer</title>
-  <meta name="description" content="AI/ML Engineer portfolio. I build production-grade AI and ML systems end-to-end: from data and modeling to deployment." />
-  
-  <meta property="og:title" content="Abhishek Chettiar — AI/ML Engineer" />
-  <meta property="og:description" content="I build production-grade AI and ML systems end-to-end: from data and modeling to deployment." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/Logo.png" />
-  
-  <meta name="theme-color" content="#0f172a" />
-
-  <link rel="icon" href="assets/Logo.png" type="image/png">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abhishek Chettiar • Portfolio</title>
+  <meta name="description" content="Portfolio of Abhishek Chettiar, AI/ML Engineer and Python Developer.">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top">Abhishek Chettiar</a>
-      <nav>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
+<body class="bg-zinc-50 text-zinc-900 dark:bg-black dark:text-zinc-100 font-sans">
+  <header class="sticky top-0 z-40 border-b bg-white/70 dark:bg-zinc-900/50 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#" class="text-lg font-semibold">Abhishek Chettiar</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:opacity-80">About</a>
+        <a href="#projects" class="hover:opacity-80">Projects</a>
+        <a href="#experience" class="hover:opacity-80">Experience</a>
+        <a href="#contact" class="hover:opacity-80">Contact</a>
+        <button id="themeToggle" class="rounded-xl border px-3 py-1 text-sm hover:scale-[1.02] transition">Toggle theme</button>
       </nav>
+      <button id="menuBtn" class="md:hidden rounded-xl border px-3 py-1 text-sm">Menu</button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t bg-white dark:bg-zinc-900">
+      <div class="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#about" class="hover:opacity-80">About</a>
+        <a href="#projects" class="hover:opacity-80">Projects</a>
+        <a href="#experience" class="hover:opacity-80">Experience</a>
+        <a href="#contact" class="hover:opacity-80">Contact</a>
+        <button id="themeToggleMobile" onclick="document.querySelector('#themeToggle').click();" class="rounded-xl border px-3 py-1 text-sm">Toggle theme</button>
+      </div>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero container">
-      <div class="hero-text">
-        <h1>AI/ML Engineer</h1>
-        <p class="tagline">Passionate about building data-driven, intelligent solutions for real-world problems in healthcare, finance, and computer vision.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="mailto:shankarabhishek2001@gmail.com">Get in touch</a>
-          <a class="btn ghost" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
-        </div>
-        <div class="quick-facts">
-          <span>Python · PyTorch · TensorFlow · LangChain · GCP · Docker</span>
-        </div>
-      </div>
-      <div class="hero-media">
-        <img src="assets/profile.jpg" alt="Abhishek Chettiar Profile Photo" 
-             onerror="this.onerror=null;this.src='assets/Logo.png';">
-      </div>
-    </section>
-
-    <section id="projects" class="container section">
-      <h2>Selected Projects</h2>
-      <div class="grid projects-grid">
-        <article class="card featured">
-          <div class="card-head"><h3>Explainable AI for Healthcare</h3></div>
-          <p>Developed a heart disease prediction model using XGBoost with SHAP and LIME for transparent, feature-level decision impact visualization.</p>
-          <ul class="meta">
-            <li>Python · XGBoost · SHAP · LIME · Streamlit</li>
-            <li>Achieved 84% accuracy with high interpretability</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-head"><h3>AI-Powered Design-to-Code Assistant</h3></div>
-          <p>Built a multi-agent AI assistant using GPT-4.1 and Claude to convert design prompts into deployable code with automated fallback workflows.</p>
-          <ul class="meta">
-            <li>Python · GPT-4 · Claude · Hugging Face · n8n</li>
-            <li>Improved design-to-deployment time by 40%</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-head"><h3>Stock Market Prediction</h3></div>
-          <p>Built a hybrid time-series forecasting model combining LSTM and ARIMA to predict stock closing prices from 5 years of historical data.</p>
-          <ul class="meta">
-            <li>Python · LSTM · ARIMA · Keras · TensorFlow</li>
-            <li>Improved MSE by 22% over baseline</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-head"><h3>Sign Language Detection</h3></div>
-          <p>Trained a YOLOv5 model on 10K+ annotated images for real-time American Sign Language gesture detection via webcam.</p>
-          <ul class="meta">
-            <li>Python · YOLOv5 · PyTorch · OpenCV · Gradio</li>
-            <li>Achieved mAP@0.5 of 91% in real-time</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="container section">
-      <h2>Technical Skills</h2>
-      <div class="skills">
-        <span class="chip">Python</span><span class="chip">R</span><span class="chip">SQL</span>
-        <span class="chip">TensorFlow</span><span class="chip">PyTorch</span><span class="chip">Keras</span>
-        <span class="chip">Scikit-learn</span><span class="chip">Hugging Face</span><span class="chip">LangChain</span>
-        <span class="chip">GPT-4</span><span class="chip">RAG</span><span class="chip">Agentic AI</span>
-        <span class="chip">GCP</span><span class="chip">Docker</span><span class="chip">YOLO</span>
-        <span class="chip">OpenCV</span><span class="chip">Pandas</span><span class="chip">NumPy</span>
-        <span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Power BI</span>
-        <span class="chip">Tableau</span><span class="chip">Streamlit</span><span class="chip">Gradio</span>
-        <span class="chip">XGBoost</span><span class="chip">LSTM</span><span class="chip">CNN</span>
-      </div>
-    </section>
-
-    <section id="experience" class="container section">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="t-item">
-          <div class="t-left">
-            <strong>AI/ML Software Developer Intern</strong>
-            <span>WAi Technologies</span>
+  <main>
+    <!-- Hero -->
+    <section class="mx-auto max-w-6xl px-4 py-20">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div data-reveal>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">AI/ML Engineer</h1>
+          <p class="mt-4 text-lg text-zinc-600 dark:text-zinc-400">I design, build and ship AI/ML systems with clean pipelines, robust APIs and production-grade MLOps. My focus is on practical impact: higher accuracy, lower latency, and readable code.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="rounded-xl px-5 py-3 bg-black text-white dark:bg-white dark:text-black">See projects</a>
+            <a href="assets/Resume.pdf" class="rounded-xl px-5 py-3 border">Download résumé</a>
           </div>
-          <div class="t-right">
-            <span class="t-date">Apr 2025 - Jul 2025</span>
-            <p>Developed backend APIs and trained a YOLOv11 object detection model on 10K+ images, achieving 93% precision. Automated deployment workflows using n8n, reducing manual configuration by 35%.</p>
-            <a href="assets/internship-letter.pdf" class="btn ghost" target="_blank" rel="noopener">View Internship Letter</a>
+        </div>
+        <div data-reveal class="md:justify-self-end">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-tr from-zinc-200 to-transparent dark:from-zinc-800 rounded-3xl blur-2xl"></div>
+            <div class="relative rounded-3xl border bg-white/70 dark:bg-zinc-900/70 backdrop-blur p-6">
+              <div class="grid grid-cols-3 gap-4">
+                <div class="rounded-2xl h-28 border bg-zinc-50 dark:bg-zinc-800"></div>
+                <div class="rounded-2xl h-28 border bg-zinc-50 dark:bg-zinc-800"></div>
+                <div class="rounded-2xl h-28 border bg-zinc-50 dark:bg-zinc-800"></div>
+                <div class="rounded-2xl h-28 border bg-zinc-50 dark:bg-zinc-800"></div>
+                <div class="rounded-2xl h-28 border bg-zinc-50 dark:bg-zinc-800"></div>
+                <div class="rounded-2xl h-28 border bg-zinc-50 dark:bg-zinc-800"></div>
+              </div>
+              <p class="mt-4 text-sm text-zinc-500">Preview of recent work and UI components.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    
-    <section id="education" class="container section">
-        <h2>Education</h2>
-        <div class="timeline">
-            <div class="t-item">
-                <div class="t-left">
-                    <strong>PG Diploma in Artificial Intelligence & Machine Learning</strong>
-                    <span>MIT World Peace University, Pune</span>
-                </div>
-                <div class="t-right">
-                    <span class="t-date">2025</span>
-                </div>
-            </div>
-            <div class="t-item">
-                <div class="t-left">
-                    <strong>Bachelor's, Mechanical Engineering</strong>
-                    <span>A. P. Shah Institute of Technology, Thane</span>
-                </div>
-                <div class="t-right">
-                    <span class="t-date">2023</span>
-                </div>
-            </div>
-            <div class="t-item">
-                <div class="t-left">
-                    <strong>Higher Secondary Certificate (HSC)</strong>
-                    <span>Vani Vidyalaya Jr College, Mumbai</span>
-                </div>
-                <div class="t-right">
-                    <span class="t-date">2019</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="certifications" class="container section">
-      <h2>Certifications</h2>
-      <div class="skills">
-        <a class="chip" href="assets/python-masterclass.pdf" target="_blank" rel="noopener">Python Programming Masterclass</a>
-        <a class="chip" href="assets/python-deep-learning.pdf" target="_blank" rel="noopener">Python Deep Learning for Beginners</a>
-        <a class="chip" href="assets/ml-basics.pdf" target="_blank" rel="noopener">Basics of Machine Learning</a>
-        <a class="chip" href="assets/ml-az.pdf" target="_blank" rel="noopener">Machine Learning A-Z</a>
-        <a class="chip" href="assets/ai-az.pdf" target="_blank" rel="noopener">Artificial Intelligence A-Z</a>
-        <a class="chip" href="assets/ai-tools-chatgpt.pdf" target="_blank" rel="noopener">AI Tools and ChatGPT Workshop</a>
-        <a class="chip" href="assets/data-science-bootcamp.pdf" target="_blank" rel="noopener">Data Science Course: Complete Bootcamp</a>
+    <!-- About -->
+    <section id="about" class="mx-auto max-w-6xl px-4 py-12">
+      <h2 class="text-2xl font-bold">About</h2>
+      <div class="mt-4 grid md:grid-cols-3 gap-6">
+        <p class="md:col-span-2 text-zinc-600 dark:text-zinc-400">I design, build and ship AI/ML systems with clean pipelines, robust APIs and production-grade MLOps. My focus is on practical impact: higher accuracy, lower latency, and readable code.</p>
+        <ul class="space-y-2 text-sm">
+          <li>Core: Python, PyTorch, scikit-learn</li>
+          <li>Infra: Docker, FastAPI, GitHub Actions</li>
+          <li>Cloud: AWS/GCP basics</li>
+          <li>UI: React, Tailwind, Charts</li>
+        </ul>
       </div>
     </section>
 
-    <section id="contact" class="container section">
-      <h2>Contact</h2>
-      <p>Let's connect! Feel free to reach out for collaborations or just a chat.</p>
-      <p>
-          Email: <a href="mailto:shankarabhishek2001@gmail.com">shankarabhishek2001@gmail.com</a> · 
-          LinkedIn: <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/abhishek-chettiar-0am1869/">Abhishek Chettiar</a> · 
-          GitHub: <a target="_blank" rel="noopener" href="https://github.com/abhishekcs01">abhishekcs01</a>
-      </p>
+    <!-- Projects -->
+    <section id="projects" class="mx-auto max-w-6xl px-4 py-12">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold">Projects</h2>
+          <p class="text-sm text-zinc-500">Filter by tag to explore focus areas.</p>
+        </div>
+        <div id="filters" class="flex flex-wrap gap-2"></div>
+      </div>
+      <div id="projectsGrid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="mx-auto max-w-6xl px-4 py-12">
+      <h2 class="text-2xl font-bold">Experience</h2>
+      <div class="mt-6 space-y-6">
+        <div class="relative pl-6" data-reveal>
+          <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-black dark:bg-white"></div>
+          <h3 class="font-semibold">AI/ML Engineer</h3>
+          <p class="text-sm text-zinc-500">Built, deployed and monitored ML services with measurable impact.</p>
+        </div>
+        <div class="relative pl-6" data-reveal>
+          <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-black dark:bg-white"></div>
+          <h3 class="font-semibold">Software Developer</h3>
+          <p class="text-sm text-zinc-500">APIs, performance tuning, CI/CD and the usual heroic debugging.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mx-auto max-w-6xl px-4 py-12">
+      <div class="rounded-3xl border p-6 bg-white/70 dark:bg-zinc-900/70 backdrop-blur">
+        <h2 class="text-2xl font-bold">Contact</h2>
+        <p class="mt-2 text-sm text-zinc-500">For opportunities or collaborations.</p>
+        <div class="mt-6 grid md:grid-cols-2 gap-4">
+          <a href="mailto:someone@example.com" class="rounded-xl px-5 py-3 border text-center">Email</a>
+          <a href="https://github.com/" target="_blank" class="rounded-xl px-5 py-3 border text-center">GitHub</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Abhishek Chettiar. All rights reserved.</p>
+  <footer class="mx-auto max-w-6xl px-4 py-10 text-sm text-zinc-500">
+    <div class="flex items-center justify-between">
+      <p>© Abhishek Chettiar • Built with Tailwind</p>
+      <a href="#top" class="underline">Back to top</a>
     </div>
   </footer>
-  
-  <script src="script.js"></script>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Explainable AI for Healthcare",
+    "description": "Developed a heart disease prediction model using XGBoost with SHAP and LIME for transparent, feature-level decision impact visualization.",
+    "link": "#",
+    "tags": [
+      "AI",
+      "Python"
+    ]
+  },
+  {
+    "title": "Explainable AI for Healthcare",
+    "description": "Developed a heart disease prediction model using XGBoost with SHAP and LIME for transparent, feature-level decision impact visualization.",
+    "link": "#",
+    "tags": [
+      "AI",
+      "Python"
+    ]
+  },
+  {
+    "title": "Explainable AI for Healthcare",
+    "description": "A highlight from my recent work.",
+    "link": "#",
+    "tags": [
+      "AI",
+      "Python"
+    ]
+  },
+  {
+    "title": "AI-Powered Design-to-Code Assistant",
+    "description": "Built a multi-agent AI assistant using GPT-4.1 and Claude to convert design prompts into deployable code with automated fallback workflows.",
+    "link": "#",
+    "tags": [
+      "AI",
+      "Python"
+    ]
+  },
+  {
+    "title": "AI-Powered Design-to-Code Assistant",
+    "description": "A highlight from my recent work.",
+    "link": "#",
+    "tags": [
+      "AI",
+      "Python"
+    ]
+  },
+  {
+    "title": "Stock Market Prediction",
+    "description": "Built a hybrid time-series forecasting model combining LSTM and ARIMA to predict stock closing prices from 5 years of historical data.",
+    "link": "#",
+    "tags": [
+      "AI",
+      "Python"
+    ]
+  },
+  {
+    "title": "Stock Market Prediction",
+    "description": "A highlight from my recent work.",
+    "link": "#",
+    "tags": [
+      "AI",
+      "Python"
+    ]
+  },
+  {
+    "title": "Sign Language Detection",
+    "description": "Trained a YOLOv5 model on 10K+ annotated images for real-time American Sign Language gesture detection via webcam.",
+    "link": "#",
+    "tags": [
+      "AI",
+      "Python"
+    ]
+  },
+  {
+    "title": "Sign Language Detection",
+    "description": "A highlight from my recent work.",
+    "link": "#",
+    "tags": [
+      "AI",
+      "Python"
+    ]
+  }
+]

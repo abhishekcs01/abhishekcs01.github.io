@@ -1,65 +1,39 @@
-# Abhishek Chettiar — AI/ML Engineer Portfolio
+# Portfolio (Redesigned)
 
-This repository hosts my personal portfolio website, built to showcase my expertise in Artificial Intelligence and Machine Learning, projects, certifications, and experience. The site is fully responsive, performance-optimized, and deployed via **GitHub Pages**.
+This is a refreshed, static portfolio for **Abhishek Chettiar**. It uses Tailwind via CDN and vanilla JS for interactivity, making it perfect for GitHub Pages.
 
-🔗 **Live Portfolio:** [abhishekcs01.github.io](https://abhishekcs01.github.io)
+## Features
+- Dark/light theme toggle with local storage
+- Responsive layout with sticky header
+- Filterable projects grid (data/projects.json)
+- Intersection-based reveal animations
+- Minimal dependencies, static-friendly
 
----
-
-## 🚀 About the Portfolio
-This portfolio reflects my work in:
-- **Machine Learning & Deep Learning**: Building and deploying predictive models across healthcare, finance, and computer vision.
-- **LLMs & Agentic AI**: Leveraging GPT-based systems, LangChain, and multi-agent orchestration.
-- **End-to-End AI Solutions**: From data processing to deployment on cloud platforms.
-
-It includes:
-- Featured **Projects** with real-world impact.
-- **Technical Skills** across Python, TensorFlow, PyTorch, LangChain, GCP, and more.
-- **Certifications** with direct access to proof of credentials.
-- Professional résumé for download.
-
----
-
-## 🛠 Tech Stack
-- **Frontend:** HTML5, CSS3 (custom responsive design), JavaScript (lightweight animations)
-- **Styling:** Modern UI with gradient accents and subtle animations
-- **Hosting:** GitHub Pages
-- **Assets:** Optimized for performance and fast load times
-
----
-
-## 📂 Repository Structure
-
-```plaintext
-├── index.html        # Main portfolio page
-├── styles.css        # Styling (responsive & animated)
-├── script.js         # Interactivity & scroll animations
-├── assets/           # Images, resume, and certificates
-└── README.md         # You're reading it now
+## Structure
+```
+.
+├─ index.html
+├─ 404.html
+├─ .nojekyll
+├─ assets/
+│  └─ img/  # images and resume if copied
+├─ data/
+│  └─ projects.json
+└─ js/
+   └─ script.js
 ```
 
----
+## Update your info
+- Replace email and links in **index.html** (Contact section)
+- Replace the résumé file under **assets/** and update its filename in the hero button
+- Edit **data/projects.json** to add/update projects
 
-## 🔧 Deployment
-This site is live via **GitHub Pages**. To deploy:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/abhishekcs01/abhishekcs01.github.io
-2. Make edits as needed and push to main branch.
-3. Ensure GitHub Pages is enabled in Settings → Pages → Source = Deploy from branch.
+## Deploy to GitHub Pages
+1. Create/clean a repo (e.g., `abhishekcs01.github.io`).
+2. Commit and push all files to the `main` branch.
+3. In repo Settings → Pages: set **Source: Deploy from a branch**, Branch **main** and folder **/**.
+4. Wait for Pages to build. Your site will be live at `https://<username>.github.io`.
 
----
-
-## 📜 License
-
-This repository is for personal branding and is not intended for commercial use. All content (projects, certifications, and design) is © Abhishek Chettiar.
-
----
-
-## 📬 Contact Me
-
-- Email: shankarabhishek2001@gmail.com
-
-- LinkedIn: linkedin.com/in/abhishek-chettiar-0am1869
-
-- GitHub: github.com/abhishekcs01
+### Optional
+- Add a custom domain under Settings → Pages.
+- Add basic analytics (Plausible) by including their script in `index.html`.
