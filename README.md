@@ -16,7 +16,7 @@ It includes:
 - Featured **Projects** with real-world impact.
 - **Technical Skills** across Python, TensorFlow, PyTorch, LangChain, GCP, and more.
 - **Certifications** with direct access to proof of credentials.
-- Professional résumé for download.
+- Professional resume for download.
 
 ---
 
