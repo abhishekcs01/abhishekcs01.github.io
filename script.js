@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entry.target.classList.add('visible');
         
         // Stagger children elements like cards and chips
-        const itemsToStagger = entry.target.querySelectorAll('.card, .chip');
+        const itemsToStagger = entry.target.querySelectorAll('.card, .chip, .contact-btn');
         itemsToStagger.forEach((item, index) => {
           item.style.transitionDelay = `${index * 100}ms`;
         });
