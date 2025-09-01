@@ -254,7 +254,7 @@ nav a:hover::after {
   transform: translateY(-2px);
 }
 
-/* Timeline */
+/* Experience Timeline */
 .timeline {
   display: grid;
   gap: 20px;
@@ -273,7 +273,7 @@ nav a:hover::after {
   display: block;
 }
 
-.t-right span {
+.t-right .t-date {
   display: inline-block;
   background: #0f141b;
   border: 1px solid var(--line);
@@ -287,6 +287,46 @@ nav a:hover::after {
   margin-top: 10px;
 }
 
+/* ==== NEW EDUCATION SECTION STYLES ==== */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.education-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.education-info {
+  flex-grow: 1;
+}
+
+.education-info .degree {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.education-info .university {
+  font-size: 1rem;
+  color: var(--muted);
+}
 
 /* Footer */
 .site-footer {
@@ -379,29 +419,19 @@ nav a:hover::after {
   .t-item {
     grid-template-columns: 1fr;
   }
+  
+  .education-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .education-info .degree {
+    font-size: 1.1rem;
+  }
 
   .nav-wrap {
     flex-direction: column;
     gap: 10px;
   }
-}
-
-/* Proof button styling */
-.proof-btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  background: var(--brand-gradient);
-  color: #0b0f14;
-  border: none;
-  border-radius: 10px;
-  padding: 12px 0;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-.proof-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(67, 176, 255, 0.4);
 }
