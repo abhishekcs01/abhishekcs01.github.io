@@ -155,6 +155,11 @@ nav a:hover::after {
   font-weight: 800;
   letter-spacing: 0.5px;
   color: var(--text);
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 24px rgba(67,176,255,0.15);
 }
 
 .hero-text .tagline {
