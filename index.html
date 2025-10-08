@@ -45,16 +45,6 @@
           <a class="btn primary" href="mailto:shankarabhishek2001@gmail.com">Get in touch</a>
           <a class="btn ghost" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
-        <div class="socials" aria-label="Social links">
-          <a class="social" href="https://github.com/abhishekcs01" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            <span>GitHub</span>
-          </a>
-          <a class="social" href="https://www.linkedin.com/in/abhishek-chettiar-0am1869/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            <span>LinkedIn</span>
-          </a>
-        </div>
         <div class="quick-facts">
           <span>Python · PyTorch · TensorFlow · LangChain · GCP · Docker</span>
         </div>
@@ -69,35 +59,43 @@
       <h2>Selected Projects</h2>
       <div class="grid projects-grid">
         <article class="card featured">
-          <div class="card-head"><h3>Explainable AI for Healthcare</h3></div>
-          <p>Developed a heart disease prediction model using XGBoost with SHAP and LIME for transparent, feature-level decision impact visualization.</p>
+          <div class="card-head"><h3>AI-Powered Design-to-Code Assistant</h3></div>
+          <p>Multi-agent system that transforms product specs and wireframes into production-ready code. Implements planning, tool-use, and fallback strategies to reliably generate frontends/backends and infra.</p>
           <ul class="meta">
-            <li>Python · XGBoost · SHAP · LIME · Streamlit</li>
-            <li>Achieved 84% accuracy with high interpretability</li>
+            <li>Python · GPT-4 · Claude · LangChain · FastAPI · Docker · n8n</li>
+            <li>Reduced design-to-deploy cycle by 60% with automated tests and CI hooks</li>
           </ul>
         </article>
         <article class="card">
-          <div class="card-head"><h3>AI-Powered Design-to-Code Assistant</h3></div>
-          <p>Built a multi-agent AI assistant using GPT-4.1 and Claude to convert design prompts into deployable code with automated fallback workflows.</p>
+          <div class="card-head"><h3>LLM_Powered_Employment_Assistance</h3></div>
+          <p>End-to-end job search copilot: parses resumes, ranks roles, tailors ATS-optimized resumes, drafts outreach, and tracks applications with RAG over personal experience and job corpora.</p>
           <ul class="meta">
-            <li>Python · GPT-4 · Claude · Hugging Face · n8n</li>
-            <li>Improved design-to-deployment time by 40%</li>
+            <li>Python · LLM · RAG · FAISS · Streamlit · OpenAI/Claude APIs</li>
+            <li>3× outreach reply rate and ~70% time saved on applications; +25 ATS score</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-head"><h3>Explainable AI for Healthcare</h3></div>
+          <p>Heart disease risk prediction with transparent explanations. Combined XGBoost with SHAP/LIME to surface feature attributions at both global and per-patient levels.</p>
+          <ul class="meta">
+            <li>Python · XGBoost · SHAP · LIME · Streamlit</li>
+            <li>Clinically interpretable insights with strong AUROC and calibration</li>
           </ul>
         </article>
         <article class="card">
           <div class="card-head"><h3>Stock Market Prediction</h3></div>
-          <p>Built a hybrid time-series forecasting model combining LSTM and ARIMA to predict stock closing prices from 5 years of historical data.</p>
+          <p>Hybrid forecasting pipeline combining LSTM for sequence dynamics and ARIMA for residual trends, with rolling-window validation and feature engineering.</p>
           <ul class="meta">
             <li>Python · LSTM · ARIMA · Keras · TensorFlow</li>
-            <li>Improved MSE by 22% over baseline</li>
+            <li>Improved MSE by 22% over baseline models</li>
           </ul>
         </article>
         <article class="card">
           <div class="card-head"><h3>Sign Language Detection</h3></div>
-          <p>Trained a YOLOv5 model on 10K+ annotated images for real-time American Sign Language gesture detection via webcam.</p>
+          <p>Real-time ASL gesture detection trained on 10K+ images with optimized augmentation and post-processing for low-latency webcam inference.</p>
           <ul class="meta">
             <li>Python · YOLOv5 · PyTorch · OpenCV · Gradio</li>
-            <li>Achieved mAP@0.5 of 91% in real-time</li>
+            <li>mAP@0.5 of 91% with stable 30+ FPS on consumer hardware</li>
           </ul>
         </article>
       </div>
