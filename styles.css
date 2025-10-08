@@ -306,6 +306,10 @@ nav a:hover::after {
 .card h3 {
   font-size: 1.3rem;
   margin-bottom: 10px;
+  line-height: 1.2;
+  hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .card p {
