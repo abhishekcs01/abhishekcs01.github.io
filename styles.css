@@ -24,6 +24,26 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Ambient animated background glow */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -60% -40% -40% -60%;
+  z-index: -1;
+  background: radial-gradient(60% 60% at 20% 20%, rgba(67,176,255,0.10), transparent 60%),
+              radial-gradient(50% 50% at 80% 30%, rgba(96,209,255,0.10), transparent 60%),
+              radial-gradient(50% 50% at 50% 80%, rgba(67,176,255,0.06), transparent 60%);
+  filter: blur(40px) saturate(120%);
+  pointer-events: none;
+  animation: bg-rotate 40s linear infinite;
+}
+
+@keyframes bg-rotate {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -103,6 +123,23 @@ nav a:hover::after {
   width: 100%;
 }
 
+/* Header scroll progress */
+.scroll-progress {
+  position: sticky;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background: transparent;
+}
+.scroll-progress span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--brand-gradient);
+  box-shadow: 0 0 14px rgba(67,176,255,0.5);
+  transition: width 0.2s ease-out;
+}
+
 /* Hero */
 .hero {
   display: grid;
@@ -154,6 +191,28 @@ nav a:hover::after {
   box-shadow: 0 6px 20px rgba(67, 176, 255, 0.4);
 }
 
+/* Shine effect on primary button */
+.btn.primary {
+  position: relative;
+  overflow: hidden;
+}
+.btn.primary::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -30%;
+  width: 40%;
+  height: 200%;
+  transform: translateX(-120%) rotate(25deg);
+  background: linear-gradient(120deg, rgba(255,255,255,0), rgba(255,255,255,0.45), rgba(255,255,255,0));
+}
+.btn.primary:hover::after {
+  animation: shine 1s ease forwards;
+}
+@keyframes shine {
+  to { transform: translateX(320%) rotate(25deg); }
+}
+
 .btn.ghost {
   color: var(--text);
 }
@@ -189,6 +248,35 @@ nav a:hover::after {
   z-index: 1;
 }
 
+/* Socials under hero */
+.socials {
+  display: flex;
+  gap: 12px;
+  margin: 6px 0 6px;
+}
+.social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  transition: all 0.3s ease;
+}
+.social:hover {
+  color: #0b0f14;
+  border-color: transparent;
+  background: var(--brand-gradient);
+  box-shadow: 0 6px 18px rgba(67,176,255,0.35);
+  transform: translateY(-2px);
+}
+.social svg { stroke: currentColor; }
+
 /* Projects */
 .projects-grid {
   display: grid;
@@ -202,6 +290,7 @@ nav a:hover::after {
   border-radius: 18px;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
 }
 
 .card:hover {
@@ -341,6 +430,13 @@ nav a:hover::after {
   font-size: 0.95rem;
 }
 
+/* Accessibility */
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
 /* Contact Section */
 #contact h2,
 #contact p {
@@ -433,5 +529,13 @@ nav a:hover::after {
   .nav-wrap {
     flex-direction: column;
     gap: 10px;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }
