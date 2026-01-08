@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateProgress);
   }
 
-  // 3D tilt for cards (projects + education)
+  // 3D tilt and spotlight for cards (projects + education)
   if (!prefersReduced) {
     const tiltEls = document.querySelectorAll('.card, .education-item');
     tiltEls.forEach(el => {
@@ -85,10 +85,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const y = (e.clientY - rect.top) / rect.height; // 0..1
         const rotateY = (x - 0.5) * 10; // deg
         const rotateX = (0.5 - y) * 10; // deg
+        
+        // Set CSS custom properties for spotlight effect
+        el.style.setProperty('--mouse-x', `${x * 100}%`);
+        el.style.setProperty('--mouse-y', `${y * 100}%`);
+        
         if (rafId) cancelAnimationFrame(rafId);
         rafId = requestAnimationFrame(() => {
-          el.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
-          el.style.boxShadow = '0 18px 40px rgba(0,0,0,0.35)';
+          el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+          el.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)';
         });
       };
       const onLeave = () => {
@@ -153,10 +158,74 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Smooth fade-in for page load
-  document.body.style.opacity = '0';
-  requestAnimationFrame(() => {
-    document.body.style.transition = 'opacity 0.5s ease';
-    document.body.style.opacity = '1';
+  // Premium page load animation
+  document.body.classList.add('loading');
+  
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.body.classList.remove('loading');
+      document.body.style.opacity = '0';
+      requestAnimationFrame(() => {
+        document.body.style.transition = 'opacity 0.6s ease';
+        document.body.style.opacity = '1';
+      });
+    }, 100);
   });
+
+  // Add sparkle effect on random interactions
+  if (!prefersReduced) {
+    const createSparkle = (x, y) => {
+      const sparkle = document.createElement('div');
+      sparkle.style.cssText = `
+        position: fixed;
+        left: ${x}px;
+        top: ${y}px;
+        width: 4px;
+        height: 4px;
+        background: var(--brand-bright);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        animation: sparkle 0.8s ease-out forwards;
+        box-shadow: 0 0 8px rgba(96, 209, 255, 0.8);
+      `;
+      
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 800);
+    };
+
+    // Add sparkle animation CSS if not exists
+    if (!document.querySelector('#sparkle-animation')) {
+      const style = document.createElement('style');
+      style.id = 'sparkle-animation';
+      style.textContent = `
+        @keyframes sparkle {
+          0% {
+            transform: translate(0, 0) scale(0);
+            opacity: 1;
+          }
+          100% {
+            transform: translate(${Math.random() * 40 - 20}px, ${Math.random() * 40 - 20}px) scale(1);
+            opacity: 0;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
+    // Add sparkles on button clicks
+    document.querySelectorAll('.btn, .contact-btn, .chip').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const rect = this.getBoundingClientRect();
+        for (let i = 0; i < 3; i++) {
+          setTimeout(() => {
+            createSparkle(
+              rect.left + rect.width * Math.random(),
+              rect.top + rect.height * Math.random()
+            );
+          }, i * 50);
+        }
+      });
+    });
+  }
 });
