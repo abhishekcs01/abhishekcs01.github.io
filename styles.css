@@ -411,7 +411,7 @@ nav a:hover::after {
 .btn.primary span,
 .btn.primary svg {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   color: #0a0e13;
   stroke: #0a0e13;
 }
@@ -454,6 +454,16 @@ nav a:hover::after {
   border-color: var(--line-bright);
   position: relative;
   z-index: 1;
+  overflow: hidden;
+}
+
+.btn.ghost::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  z-index: -1;
+  transition: background 0.3s ease;
 }
 
 .btn.ghost span,
@@ -599,6 +609,7 @@ nav a:hover::after {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .social::before {
@@ -608,7 +619,7 @@ nav a:hover::after {
   background: var(--brand-gradient);
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 0;
+  z-index: -1;
 }
 
 .social:hover {
@@ -625,13 +636,13 @@ nav a:hover::after {
 .social svg { 
   stroke: currentColor;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   transition: transform 0.3s ease;
 }
 
 .social span {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .social:hover svg {
@@ -820,6 +831,7 @@ nav a:hover::after {
   overflow: hidden;
   backdrop-filter: blur(4px);
   cursor: pointer;
+  z-index: 1;
 }
 
 .chip::before {
@@ -829,7 +841,7 @@ nav a:hover::after {
   background: var(--brand-gradient);
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 0;
+  z-index: -1;
 }
 
 .chip:hover {
@@ -843,14 +855,9 @@ nav a:hover::after {
   opacity: 1;
 }
 
-/* Ensure chip text stays visible */
+/* Ensure chip text stays visible for anchor tags */
 a.chip {
-  position: relative;
-  z-index: 1;
-}
-
-a.chip::before {
-  z-index: -1;
+  display: inline-block;
 }
 
 /* Experience Timeline */
@@ -1047,6 +1054,7 @@ a.chip::before {
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(8px);
+  z-index: 1;
 }
 
 .contact-btn::before {
@@ -1056,7 +1064,7 @@ a.chip::before {
   background: var(--brand-gradient);
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 0;
+  z-index: -1;
 }
 
 .contact-btn:hover {
