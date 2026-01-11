@@ -658,7 +658,8 @@ nav a:hover::after {
   box-shadow: var(--shadow-sm);
 }
 
-.card::before {
+/* Top border gradient effect for regular cards (not featured) */
+.card:not(.featured)::before {
   content: "";
   position: absolute;
   top: 0;
@@ -671,23 +672,26 @@ nav a:hover::after {
   box-shadow: 0 4px 16px rgba(59, 159, 255, 0.5);
 }
 
+/* Spotlight hover effect for all cards */
 .card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(59, 159, 255, 0.03), transparent 50%);
+  background: radial-gradient(300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(59, 159, 255, 0.06), transparent 60%);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
   z-index: 0;
 }
 
-.card:hover::before {
+/* Show top border on hover for regular cards */
+.card:not(.featured):hover::before {
   opacity: 1;
 }
 
+/* Show spotlight effect on hover for all cards */
 .card:hover::after {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .card:hover {
@@ -704,7 +708,8 @@ nav a:hover::after {
   border-width: 2px;
 }
 
-.card.featured::after {
+/* Featured badge - using ::before for the badge since ::after is used for spotlight */
+.card.featured::before {
   content: "⭐ Featured";
   position: absolute;
   top: 20px;
@@ -719,7 +724,10 @@ nav a:hover::after {
   letter-spacing: 0.5px;
   box-shadow: 0 4px 12px rgba(59, 159, 255, 0.3);
   animation: pulse-badge 3s ease-in-out infinite;
-  z-index: 2;
+  z-index: 3;
+  opacity: 1;
+  height: auto;
+  pointer-events: none;
 }
 
 @keyframes pulse-badge {
