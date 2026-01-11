@@ -769,7 +769,7 @@ nav a:hover::after {
   color: var(--brand);
 }
 
-/* Skills & Chips */
+/* Skills & Chips - Updated for text visibility */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -789,14 +789,34 @@ nav a:hover::after {
   position: relative;
   backdrop-filter: blur(4px);
   cursor: pointer;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
 }
 
-.chip:hover {
-  background: var(--brand-gradient);
-  color: #0a0e13;
-  border-color: transparent;
+/* Super explicit hover states to ensure text visibility */
+.chip:hover,
+a.chip:hover,
+span.chip:hover {
+  background: var(--brand-gradient) !important;
+  background: linear-gradient(135deg, #3b9fff 0%, #60d1ff 100%) !important;
+  color: #000000 !important;
+  border-color: transparent !important;
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 6px 20px rgba(59, 159, 255, 0.35);
+  -webkit-text-fill-color: #000000 !important;
+  background-clip: initial !important;
+  -webkit-background-clip: initial !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+
+/* Force text color on hover with maximum specificity */
+.skills .chip:hover,
+.skills a.chip:hover,
+.skills span.chip:hover {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
 }
 
 /* Ensure chip text stays visible */
